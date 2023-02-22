@@ -8,12 +8,12 @@ const Programs = () => {
       title: "Tech For Global Competitions",
       image: "/images/techsupport1.jpg",
     },
-    { title: "Tech For Global Summits", image: "/images/techsupport1.jpg" },
+    { title: "Tech For Global Summits", image: "/images/techsupport3.jpg" },
     {
       title: " Tech For Global Accelerator",
-      image: "/images/techsupport1.jpg",
+      image: "/images/techsupport2.jpg",
     },
-    { title: "Tech For Global Community", image: "/images/techsupport1.jpg" },
+    { title: "Tech For Global Community", image: "/images/techsupport3.jpg" },
   ];
   return (
     <div id="programs" className="centerClass">
