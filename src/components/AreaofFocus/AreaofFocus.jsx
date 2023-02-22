@@ -40,7 +40,7 @@ const AreaofFocus = () => {
     <div
       style={{
         display: "flex",
-        height: window.innerHeight > 760 ? "90vh" : "900px",
+        // height: window.innerHeight < 760 ? "1000px" : "70vh",
         // height: "90vh",
         paddingTop: "3rem",
         paddingBottom: "3rem",
@@ -79,6 +79,7 @@ const AreaofFocus = () => {
           flex: 1,
           overflow: "scroll",
           backgroundColor: "transparent",
+          maxHeight: "80vh",
         }}
         ref={rightDivRef}
       >
