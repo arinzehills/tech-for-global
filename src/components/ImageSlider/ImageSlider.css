@@ -122,10 +122,10 @@
 }
 
 .slider-dot.active {
-  background-color: blue;
+  background-color: var(--blue);
 }
 @media screen and (max-width: 960px) {
   .slider {
-    height: 50vh;
+    height: 70vh;
   }
 }

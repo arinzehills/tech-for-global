@@ -60,7 +60,7 @@ function Hero({
           >
             <div
               className="hero__text_wrapper"
-              data-aos={"fade-right"}
+              data-aos={"fade-left"}
               data-aos-easing="ease-out-cubic"
               data-aos-duration="1000"
             >

@@ -54,7 +54,12 @@ const ImageSlider = ({
               {showCenterText &&
                 (showText ? (
                   <div className="slider-contents">
-                    <h1 className="slide-in">{slide?.title}</h1>
+                    <h1
+                      className="slide-in"
+                      style={{ fontSize: window.innerWidth < 760 && "30px" }}
+                    >
+                      {slide?.title}
+                    </h1>
                     <div className="slide-in-left">
                       <p>{slide?.description ?? "The words"}</p>
                       <ScrollLink

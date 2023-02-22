@@ -14,7 +14,7 @@
   background: var(--success);
 }
 .btn--blue {
-  background: linear-gradient(to right, #190762, #00f7ff);
+  background: linear-gradient(to right, hsl(241, 87%, 33%), #00f7ff);
 }
 .btn--blue-light {
   background: linear-gradient(to top, #2255ff, #00f7ff);
