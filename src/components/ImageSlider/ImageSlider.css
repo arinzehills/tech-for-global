@@ -1,0 +1,131 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* left: 0;
+  right: 0;
+  top: 0;
+  margin: 0; */
+  overflow: hidden;
+}
+.slider-image {
+  width: 100vw;
+  height: 600px;
+  /* margin: -99rem; */
+  padding: 0;
+  max-width: 99vw;
+  border-radius: 10px;
+  filter: brightness(60%);
+}
+.slider-image.smaller {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+.slider-arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slider-arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slider-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  animation: fade-in 1s ease-in forwards;
+  animation-delay: 3s;
+  /* left: 32px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none; */
+}
+.slide-in {
+  opacity: 0;
+  animation: slide-in 1s ease-out forwards;
+}
+.slide-in-left {
+  opacity: 0;
+  animation: slide-in-left 1s ease-out forwards;
+  /* color: #201959; */
+}
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.slider-contents p {
+  font-size: 1rem;
+}
+.myslide {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+.myslide.myslide-active {
+  opacity: 1;
+  transition: 1s ease;
+  transform: scale(1.08);
+}
+.slider-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: white;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: blue;
+}
+@media screen and (max-width: 960px) {
+  .slider {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,47 @@
+/* body {
+  background: #333;
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.no-linear-wipe {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #2255ff 20%,
+    #00f7ff 40%,
+    rgb(99, 94, 255) 60%,
+    #00f7ff 80%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.linear-wipe {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #2255ff 20%,
+    #2255ff 40%,
+    var(--success) 60%,
+    #2255ff 80%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

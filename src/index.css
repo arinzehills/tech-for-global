@@ -1,0 +1,102 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  /* background-color: rgba(245, 245, 255, 0.069); */
+
+  background: linear-gradient(
+    106.37deg,
+    rgba(232, 235, 255, 0.933) 51.55%,
+    rgba(236, 220, 249, 0.955) 90.85%,
+    rgba(235, 253, 255, 0.961) 29.63%
+  );
+}
+.blue-gradient {
+  background: linear-gradient(
+    to right,
+    #2255ff 20%,
+    #00f7ff 40%,
+    rgb(99, 94, 255) 60%,
+    #00f7ff 80%
+  );
+}
+.transparentGlass {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.withBlur {
+  /* border: 1px solid #fff; */
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.withGap {
+  gap: 1rem;
+}
+.orange-gradient {
+  background-image: linear-gradient(180deg, #fbc822, #fa6328);
+}
+.centerClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerClass.withRow {
+  flex-direction: row;
+}
+.centerClass.withColumn {
+  flex-direction: column;
+}
+#whatwedo {
+  position: relative;
+  padding: 12px;
+  box-sizing: content-box;
+  background-color: #201959;
+  padding: 20px;
+  margin-top: 40px;
+  min-height: 80vh;
+}
+#whatwedo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 13px solid #eee;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  /* transform: scale(9); */
+}
+
+.iconClass {
+  height: 50px;
+  width: 50px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
