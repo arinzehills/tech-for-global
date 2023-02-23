@@ -15,10 +15,7 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  /* background-color: rgba(245, 245, 255, 0.069); */
-
+  padding: 0;
   background: linear-gradient(
     106.37deg,
     rgba(232, 235, 255, 0.933) 51.55%,
@@ -59,25 +56,6 @@ body {
 }
 .centerClass.withColumn {
   flex-direction: column;
-}
-#whatwedo {
-  position: relative;
-  padding: 12px;
-  box-sizing: content-box;
-  background-color: #201959;
-  padding: 20px;
-  margin-top: 40px;
-  min-height: 80vh;
-}
-#whatwedo::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-bottom: 13px solid #eee;
-  border-left: 55px solid transparent;
-  border-right: 55px solid transparent;
-  /* transform: scale(9); */
 }
 
 .iconClass {

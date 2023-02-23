@@ -22,11 +22,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0;
   align-items: center;
   gap: 1rem;
   z-index: 999;
-  justify-content: space-around;
+  justify-content: space-evenly;
   transition: 0.6s;
 }
 header.sticky {
@@ -38,7 +37,9 @@ header.sticky {
 header.sticky a {
   color: black;
 }
-
+header nav {
+  display: flex;
+}
 header a {
   /* display: flex; */
   font-weight: 600;
@@ -53,13 +54,14 @@ header a {
 }
 header a::before {
   content: "";
-  background: var(--success);
+  background: var(--blue);
 
   display: block;
-  position: absolute;
+  position: relative;
   bottom: -3px;
   left: 0;
   width: 0;
+  top: 30px;
   border-radius: 20px;
   height: 8px;
   transition: all 0.3s ease-in-out;
@@ -78,7 +80,7 @@ header .nav-btn {
   padding: 0.5rem;
   border-radius: 10px;
   cursor: pointer;
-  background: var(--blue);
+  background: var(--blue-gradient);
 
   border: none;
   outline: none;
@@ -99,29 +101,23 @@ header h3 {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     display: flex;
-    visibility: hidden;
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* gap: 1.5rem; */
+    gap: 1.5rem;
     background: var(--blue);
+    /* background: var(--success); */
     transition: 1s;
     transform: translateY(-100vh);
   }
-  header nav.responsive_nav {
-    visibility: visible;
-  }
   header .responsive_nav {
     transform: none;
-    visibility: visible;
   }
   nav .nav-close-btn {
     position: absolute;
     top: 2rem;
-    /* right: 2rem; */
-    z-index: 999;
+    right: 2rem;
   }
 }

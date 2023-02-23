@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* <Link className="nav-links">What we do</Link> */}
         <FaTimes className="nav-btn nav-close-btn" onClick={showNavbar} />
       </nav>
-      <div style={{ gap: "1rem" }}>
+      <div style={{ gap: window.innerWidth > 769 && "1rem" }}>
         <Button buttonColor={"btn--blue-light"} rounded={true}>
           Apply
         </Button>

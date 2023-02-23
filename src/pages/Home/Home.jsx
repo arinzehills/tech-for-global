@@ -40,7 +40,7 @@ const Home = () => {
     buttonColor: "btn--orange",
   };
   return (
-    <div>
+    <div style={{ margin: 0, padding: 0 }}>
       <ImageSlider slides={slides} showCenterText={true} />
       <WhatWeDo />
       <AreaofFocus />

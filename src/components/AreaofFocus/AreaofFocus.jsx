@@ -42,23 +42,27 @@ const AreaofFocus = () => {
         display: "flex",
         // height: window.innerHeight < 760 ? "1000px" : "70vh",
         // height: "90vh",
+
         paddingTop: "3rem",
         paddingBottom: "3rem",
+        // padding: "1rem",
+        margin: 0,
         flexDirection: window.innerWidth < 760 && "column",
       }}
       id={"areaoffocus"}
     >
       <div
         style={{
-          width: window.innerWidth > 760 && "40%",
+          maxWidth: window.innerWidth > 760 ? "40%" : "90vw",
           textAlign: "left",
           color: "grey",
           padding: "10%",
+          // display: "none",
           alignItems: "flex-start",
         }}
         className="centerClass withColumn withGap"
         onWheel={handleFixedDivScroll}
-        data-aos={"fade-right"}
+        data-aos={window.innerWidth < 769 ? "fade-down" : "fade-right"}
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000"
       >
@@ -77,9 +81,12 @@ const AreaofFocus = () => {
       <div
         style={{
           flex: 1,
-          overflow: "scroll",
+          overflow: window.innerWidth < 760 ? "visible" : "scroll",
+          // scrollbarWidth: "none",
           backgroundColor: "transparent",
-          maxHeight: "80vh",
+          maxHeight: window.innerWidth > 760 && "80vh",
+          // width: window.innerWidth < 760 && "90%",
+          scrollbarColor: " red yellow",
         }}
         ref={rightDivRef}
       >
@@ -88,10 +95,10 @@ const AreaofFocus = () => {
             key={area}
             style={{
               height: "100px",
-              margin: "10px",
+              // margin: "10px",
               color: "white",
-              width: "300px",
-              marginTop: "2rem",
+              width: window.innerWidth < 760 ? "280px" : "300px",
+              marginTop: "3rem",
             }}
             className="focus-content__container"
             // data-aos={index < 3 && "fade-left"}
