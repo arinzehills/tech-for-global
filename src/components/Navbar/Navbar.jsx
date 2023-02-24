@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -54,7 +55,12 @@ const Navbar = () => {
           Apply
         </Button>
       </div>
-      <HiMenuAlt4 className="nav-btn" onClick={showNavbar} />
+      {/* <HiMenuAlt4 className="nav-btn" onClick={showNavbar} /> */}
+      <Icon
+        className="nav-btn"
+        icon="fa6-solid:bars-staggered"
+        onClick={showNavbar}
+      />
     </header>
   );
 };
