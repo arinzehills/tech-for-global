@@ -107,7 +107,6 @@ const AreaofFocus = () => {
       />
       <div
         style={{
-          flex: 1,
           overflow: window.innerWidth < 760 ? "visible" : "scroll",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -117,6 +116,7 @@ const AreaofFocus = () => {
           scrollbarColor: " red yellow",
         }}
         ref={rightDivRef}
+        className={window.innerWidth < 760 && "centerClass withColumn"}
       >
         {areas.map((area, index) => (
           <div
@@ -125,7 +125,7 @@ const AreaofFocus = () => {
               // height: "100px",
               // margin: "10px",
               color: "white",
-              width: window.innerWidth < 760 ? "280px" : "300px",
+              width: window.innerWidth < 760 ? "270px" : "300px",
               marginTop: "3rem",
             }}
             className="focus-content__container"
