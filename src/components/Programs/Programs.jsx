@@ -25,7 +25,7 @@ const Programs = () => {
         </div>
         <div className="programs-section">
           {programs.map((program) => (
-            <div className="programs-container">
+            <div className="programs-container" key={program.title}>
               <img src={program.image} alt="" height={265} width="100%" />
               <h3 style={{ color: "#3b2a82" }}>{program.title}</h3>
             </div>

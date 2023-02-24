@@ -11,27 +11,17 @@ import LeftDiv from "./LeftDiv";
 const AreaofFocus = () => {
   const rightDivRef = useRef(null);
   const leftDivRef = useRef(null);
+  const areaRef = useRef(null);
 
   const handleFixedDivScroll = (e) => {
     if (rightDivRef.current && window.innerWidth > 769) {
-      // leftDivRef.current.style.position = "static";
-      // rightDivRef.current.style.marginLeft = "40vw";
-      rightDivRef.current.scrollBy({ top: e.deltaY });
-    } else {
-      leftDivRef.current.style.position = "relative";
-    }
-    // if (
-    //   rightDivRef.current &&
-    //   rightDivRef.current.scrollHeight ===
-    //     rightDivRef.current.clientHeight + rightDivRef.current.scrollTop
-    // ) {
-    //   console.log("upper one");
-    //   rightDivRef.current.scrollBy({ top: e.deltaY });
+      const scrollIncrement = 230;
+      // rightDivRef.current.scrollBy({ top: e.deltaY });
 
-    //   return;
-    // }
-    // console.log("down one");
-    // leftDivRef.current.style.overflow = "scroll";
+      areaRef.current.scrollTop += e.deltaY * (0.1 / 100);
+      leftDivRef.current.scrollTop += e.deltaY * (1 / 100);
+      rightDivRef.current.scrollTop += e.deltaY * (scrollIncrement / 100);
+    }
   };
   useEffect(() => {
     AOS.init();
@@ -100,6 +90,8 @@ const AreaofFocus = () => {
         flexDirection: window.innerWidth < 760 && "column",
       }}
       id={"areaoffocus"}
+      onWheel={handleFixedDivScroll}
+      ref={areaRef}
     >
       <LeftDiv
         handleFixedDivScroll={handleFixedDivScroll}
@@ -112,8 +104,6 @@ const AreaofFocus = () => {
           msOverflowStyle: "none",
           backgroundColor: "transparent",
           maxHeight: window.innerWidth > 760 && "95vh",
-          // width: window.innerWidth < 760 && "90%",
-          scrollbarColor: " red yellow",
         }}
         ref={rightDivRef}
         className={window.innerWidth < 760 && "centerClass withColumn"}

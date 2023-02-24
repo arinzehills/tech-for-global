@@ -10,8 +10,11 @@ const LeftDiv = ({ handleFixedDivScroll, leftDivRef }) => {
         maxWidth: window.innerWidth > 760 ? "40%" : "90vw",
         textAlign: "left",
         color: "grey",
+        position: "fixed",
         padding: "10%",
         // display: "none",
+        position: "static",
+        // position:'-webkit-sticky'
         maxHeight: "70vh",
         alignItems: "flex-start",
       }}

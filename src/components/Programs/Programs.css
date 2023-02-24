@@ -6,6 +6,7 @@
   backdrop-filter: blur(20px);
   padding: 2rem;
   width: 80%;
+  margin-top: 80px;
 }
 .programs-section {
   display: grid;
