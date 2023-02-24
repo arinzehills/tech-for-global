@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { HiMenuAlt4 } from "react-icons/hi";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Button from "../Button/Button";
@@ -53,7 +54,7 @@ const Navbar = () => {
           Apply
         </Button>
       </div>
-      <FaBars className="nav-btn" onClick={showNavbar} />
+      <HiMenuAlt4 className="nav-btn" onClick={showNavbar} />
     </header>
   );
 };
