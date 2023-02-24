@@ -27,6 +27,7 @@
   box-shadow: 14px 14px 60px 0 rgb(59 42 130 / 6%);
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  width: 80%;
 }
 @media screen and (max-width: 760px) {
   .programs-section {
