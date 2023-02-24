@@ -125,7 +125,7 @@ const AreaofFocus = () => {
               // height: "100px",
               // margin: "10px",
               color: "white",
-              width: window.innerWidth < 760 ? "270px" : "300px",
+              width: window.innerWidth < 760 ? "250px" : "300px",
               marginTop: "3rem",
             }}
             className="focus-content__container"
