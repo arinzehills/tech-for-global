@@ -48,7 +48,7 @@ const Navbar = () => {
         <Button
           buttonColor={"btn--blue-light"}
           rounded={true}
-          style={{ margin: 0 }}
+          style={{ margin: 0, height: "40px", minWidth: "90px" }}
         >
           Apply
         </Button>
