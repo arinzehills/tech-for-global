@@ -77,15 +77,15 @@ header a:hover::before {
   margin-left: 10px;
 }
 header .nav-btn {
-  padding: 0.5rem;
+  padding: 0.9rem;
   border-radius: 10px;
   cursor: pointer;
   background: var(--blue-gradient);
-
   border: none;
   outline: none;
   color: white;
   visibility: hidden;
+  font-size: 20px;
   opacity: 0;
 }
 header h3 {
