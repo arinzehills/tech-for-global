@@ -11,10 +11,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current?.classList.toggle("responsive_nav");
   };
   window.addEventListener("scroll", function () {
-    headerRef.current.classList.toggle("sticky", window.scrollY > 0);
+    headerRef.current?.classList.toggle("sticky", window.scrollY > 0);
   });
 
   const ScrollTo = ({ to, title }) => {
@@ -45,7 +45,7 @@ const Navbar = () => {
         <FaTimes className="nav-btn nav-close-btn" onClick={showNavbar} />
       </nav>
       <div style={{ gap: window.innerWidth > 769 && "1rem" }}>
-        <Button buttonColor={"btn--blue-light"} rounded={true}>
+        <Button buttonColor={"btn--blue-light"} rounded={true} style>
           Apply
         </Button>
       </div>
